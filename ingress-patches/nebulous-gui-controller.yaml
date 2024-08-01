@@ -1,0 +1,7 @@
+ingress:
+  enabled: true
+  hosts:
+    - host: gui-controller.127.0.0.1.sslip.io
+      paths:
+        - path: /
+          pathType: ImplementationSpecific

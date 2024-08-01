@@ -1,0 +1,12 @@
+builderEnv:
+  - name: VITE_API_URL
+    value: "http://gui-controller.127.0.0.1.sslip.io"
+ingress:
+  enabled: true
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+  hosts:
+    - host: gui.127.0.0.1.sslip.io
+      paths:
+        - path: /(assets/.*$)|(.*$)
+          pathType: ImplementationSpecific

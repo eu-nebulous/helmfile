@@ -1,0 +1,4 @@
+app:
+  ONM_URL: 'http://onm.127.0.0.130.sslip.io'
+  ACTIVEMQ_HOST: '127.0.0.129'
+  ACTIVEMQ_PORT: '30000'

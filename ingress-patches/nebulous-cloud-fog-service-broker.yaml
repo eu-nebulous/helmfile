@@ -1,0 +1,17 @@
+env:
+  backendHost: "http://cfsb-backend.127.0.0.1.sslip.io/backend"
+frontend:
+  ingress:
+    enabled: true
+    hosts:
+      - host: cfsb.127.0.0.1.sslip.io
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+ingress:
+  enabled: true
+  hosts:
+    - host: cfsb-backend.127.0.0.1.sslip.io
+      paths:
+        - path: /
+          pathType: ImplementationSpecific

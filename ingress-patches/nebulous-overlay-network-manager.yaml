@@ -1,0 +1,7 @@
+ingress:
+  enabled: true
+  hosts:
+    - host: onm.127.0.0.130.sslip.io
+      paths:
+        - path: /
+          pathType: ImplementationSpecific

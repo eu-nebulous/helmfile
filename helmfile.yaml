@@ -1,0 +1,81 @@
+repositories:
+  - name: nebulous
+    url: https://eu-nebulous.github.io/helm-charts
+
+releases:
+
+  # infra services
+  - name: nebulous-activemq
+    chart: nebulous/nebulous-activemq
+    values:
+      - image-tag-patches/nebulous-activemq.yaml
+      - service-patches/nebulous-activemq.yaml
+  - name: nebulous-influxdb
+    chart: nebulous/nebulous-influxdb
+    values:
+      - image-tag-patches/nebulous-influxdb.yaml
+
+  # ingress-exposed services
+  - name: nebulous-gui
+    chart: nebulous/nebulous-gui
+    values:
+      - image-tag-patches/nebulous-gui.yaml
+      - ingress-patches/nebulous-gui.yaml
+  - name: nebulous-gui-controller
+    chart: nebulous/nebulous-gui-controller
+    values:
+      - image-tag-patches/nebulous-gui-controller.yaml
+      - ingress-patches/nebulous-gui-controller.yaml
+  - name: nebulous-cloud-fog-service-broker
+    chart: nebulous/nebulous-cloud-fog-service-broker
+    values:
+      - image-tag-patches/nebulous-cloud-fog-service-broker.yaml
+      - ingress-patches/nebulous-cloud-fog-service-broker.yaml
+  - name: nebulous-overlay-network-manager
+    chart: nebulous/nebulous-overlay-network-manager
+    values:
+      - image-tag-patches/nebulous-overlay-network-manager.yaml
+      - ingress-patches/nebulous-overlay-network-manager.yaml
+
+  # services connecting to external world
+  # SAL -> PWS
+  - name: nebulous-sal
+    chart: nebulous/nebulous-sal
+    values:
+      - image-tag-patches/nebulous-sal.yaml
+      - config-patches/nebulous-sal.yaml
+
+  # internal services
+  - name: nebulous-exn-middleware
+    chart: nebulous/nebulous-exn-middleware
+    values:
+      - image-tag-patches/nebulous-exn-middleware.yaml
+  - name: nebulous-resource-manager
+    chart: nebulous/nebulous-resource-manager
+    values:
+      - image-tag-patches/nebulous-resource-manager.yaml
+  - name: nebulous-monitoring
+    chart: nebulous/nebulous-monitoring
+    values:
+      - image-tag-patches/nebulous-monitoring.yaml
+  - name: nebulous-monitoring-data-persistor
+    chart: nebulous/nebulous-monitoring-data-persistor
+    values:
+      - image-tag-patches/nebulous-monitoring-data-persistor.yaml
+  - name: nebulous-slo-violation-detector
+    chart: nebulous/nebulous-slo-violation-detector
+    values:
+      - image-tag-patches/nebulous-slo-violation-detector.yaml
+  - name: nebulous-prediction-orchestrator
+    chart: nebulous/nebulous-prediction-orchestrator
+    values:
+      - image-tag-patches/nebulous-prediction-orchestrator.yaml
+  - name: nebulous-optimiser-controller
+    chart: nebulous/nebulous-optimiser-controller
+    values:
+      - image-tag-patches/nebulous-optimiser-controller.yaml
+      - config-patches/nebulous-optimiser-controller.yaml
+  - name: nebulous-optimiser-utility-evaluator
+    chart: nebulous/nebulous-optimiser-utility-evaluator
+    values:
+      - image-tag-patches/nebulous-optimiser-utility-evaluator.yaml
