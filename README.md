@@ -25,9 +25,13 @@ This method of installation requires the following:
 - (optional) git: https://git-scm.com/ (any typically available version nowadays will do)
   - this can be avoided by downloading the tarball of this repo but it is best practice to keep versioning any custom changes in git
 
-### External dependencies of NebulOuS
+### External dependency of NebulOuS - ProActive Scheduler
 
 NebulOuS depends on having access to an installation of [ProActive Scheduler](https://github.com/ow2-proactive/scheduling) (PWS). It is used by the Scheduling Abstraction Layer (SAL) component of NebulOuS.
+
+The license and installer can be found at https://www.activeeon.com/myaccount/signin/.
+For NebulOuS partners, they are gratuitous:
+please reach out to your NebulOuS point of contact to obtain the license and installer.
 
 ## Exposed services (and their ports)
 
