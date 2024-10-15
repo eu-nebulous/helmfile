@@ -4,16 +4,17 @@ repositories:
 
 releases:
 
-  # infra services
+  # exposed services
   - name: nebulous-activemq
     chart: nebulous/nebulous-activemq
     values:
       - image-tag-patches/nebulous-activemq.yaml
       - service-patches/nebulous-activemq.yaml
-  - name: nebulous-influxdb
-    chart: nebulous/nebulous-influxdb
+  - name: nebulous-monitoring
+    chart: nebulous/nebulous-monitoring
     values:
-      - image-tag-patches/nebulous-influxdb.yaml
+      - image-tag-patches/nebulous-monitoring.yaml
+      - service-patches/nebulous-monitoring.yaml
 
   # ingress-exposed services
   - name: nebulous-gui
@@ -46,6 +47,10 @@ releases:
       - config-patches/nebulous-sal.yaml
 
   # internal services
+  - name: nebulous-influxdb
+    chart: nebulous/nebulous-influxdb
+    values:
+      - image-tag-patches/nebulous-influxdb.yaml
   - name: nebulous-exn-middleware
     chart: nebulous/nebulous-exn-middleware
     values:
@@ -54,10 +59,6 @@ releases:
     chart: nebulous/nebulous-resource-manager
     values:
       - image-tag-patches/nebulous-resource-manager.yaml
-  - name: nebulous-monitoring
-    chart: nebulous/nebulous-monitoring
-    values:
-      - image-tag-patches/nebulous-monitoring.yaml
   - name: nebulous-monitoring-data-persistor
     chart: nebulous/nebulous-monitoring-data-persistor
     values:

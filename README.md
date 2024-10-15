@@ -45,8 +45,12 @@ Certain services need to be typically reachable from outside the cluster. These 
 
 - TCP-Service-based:
   - [ActiveMQ](https://github.com/eu-nebulous/activemq) AMQP (default of port TCP 30000)
+  - [Monitoring (EMS)](https://github.com/eu-nebulous/monitoring)
+    - Web GUI over HTTPS (default of port TCP 30111)
+    - ActiveMQ OpenWire TLS (default of port TCP 31617)
+    - Baguette SSH (default of port TCP 32222)
 
-Two services have to be reachable from the to-be-NebulOuS-managed systems: ActiveMQ AMQP, and ONM.
+Three services have to be reachable from the to-be-NebulOuS-managed systems: ActiveMQ AMQP, EMS (3 subservices) and ONM.
 
 ## (optional) Setting up kind
 

@@ -1,0 +1,25 @@
+# FIXME: this is hard to keep in check, the chart needs to be made better configurable; also, http should be exposed using ingress
+ports:
+  - name: http
+    containerPort: 8111
+    protocol: TCP
+    public: true
+    nodePort: 30111
+  - name: openwire
+    containerPort: 61616
+    protocol: TCP
+    public: false
+  - name: openwire-tls
+    containerPort: 61617
+    protocol: TCP
+    public: true
+    nodePort: 31617
+  - name: stomp
+    containerPort: 61610
+    protocol: TCP
+    public: false
+  - name: baguette
+    containerPort: 2222
+    protocol: TCP
+    public: true
+    nodePort: 32222
