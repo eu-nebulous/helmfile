@@ -80,6 +80,15 @@ nodes:
   - containerPort: 30000
     hostPort: 30000
     protocol: TCP
+  - containerPort: 30111
+    hostPort: 30111
+    protocol: TCP
+  - containerPort: 31617
+    hostPort: 31617
+    protocol: TCP
+  - containerPort: 32222
+    hostPort: 32222
+    protocol: TCP
 EOF
 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
