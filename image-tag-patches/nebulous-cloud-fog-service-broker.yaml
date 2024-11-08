@@ -1,5 +1,5 @@
 image:
-  tag: main
+  tag: r1-eb808aaf8afe800594ece0a4691702db07732b14-20241031093336
 frontend:
   image:
-    tag: main
+    tag: r1-eb808aaf8afe800594ece0a4691702db07732b14-20241031093337

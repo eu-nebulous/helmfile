@@ -1,2 +1,5 @@
 image:
-  tag: dev
+  tag: dev-2024-10-30
+scripts:
+  image:
+    tag: r1-2a6437ab2741282adf0aae746ceca100d916eaad-20241031090738
