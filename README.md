@@ -29,9 +29,7 @@ This method of installation requires the following:
 
 NebulOuS depends on having access to an installation of [ProActive Scheduler](https://github.com/ow2-proactive/scheduling) (PWS). It is used by the Scheduling Abstraction Layer (SAL) component of NebulOuS.
 
-The license and installer can be found at https://www.activeeon.com/myaccount/signin/.
-For NebulOuS partners, they are gratuitous:
-please reach out to your NebulOuS point of contact to obtain the license and installer.
+To set it up, please follow the instructions at https://github.com/eu-nebulous/nebulous/wiki/1.1-Installation-Walk%E2%80%90trough-for-Development-&-Evaluation#proactive-scheduler
 
 ## Exposed services (and their ports)
 
