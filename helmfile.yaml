@@ -59,6 +59,7 @@ releases:
     chart: nebulous/nebulous-resource-manager
     values:
       - image-tag-patches/nebulous-resource-manager.yaml
+      - config-patches/nebulous-resource-manager.yaml
   - name: nebulous-monitoring-data-persistor
     chart: nebulous/nebulous-monitoring-data-persistor
     values:
