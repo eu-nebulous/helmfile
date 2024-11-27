@@ -100,8 +100,8 @@ Notably, every working installation will need changes in `config-patches` and `i
 
 * 127.0.0.1 denotes an address that must be reachable by NebulOuS users
   * its associated example domain is 127.0.0.1.sslip.io
-* 127.0.0.129 and 130 denote addresses that must be reachable from to-be-NebulOuS-managed systems
-  * their associated domains are 127.0.0.129.sslip.io and 130 analogously
+* 127.0.0.129, 130, and 131 denote addresses that must be reachable from to-be-NebulOuS-managed systems
+  * their associated domains are 127.0.0.129.sslip.io, 130, and 131 analogously
 
 Often all the above can be replaced by the same, public IP address exposing the services of the Kubernetes cluster NebulOuS is installed on. If no domain name is available, the sslip.io variants can be kept (on the note that a globally-valid HTTPS certificate would not be possible).
 

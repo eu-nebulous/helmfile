@@ -1,0 +1,6 @@
+# these tell EMS (monitoring) how it is exposed and, consequently,
+# what should be advertised to the nodes managed by NebulOuS
+env:
+  EMS_SERVER_ADDRESS: "127.0.0.131"
+  BAGUETTE_SERVER_ADDRESS: "127.0.0.131"
+  BAGUETTE_SERVER_PORT: "32222"

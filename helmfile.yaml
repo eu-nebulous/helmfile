@@ -13,6 +13,7 @@ releases:
   - name: nebulous-monitoring
     chart: nebulous/nebulous-monitoring
     values:
+      - config-patches/nebulous-monitoring.yaml
       - image-tag-patches/nebulous-monitoring.yaml
       - service-patches/nebulous-monitoring.yaml
 
