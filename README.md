@@ -118,3 +118,34 @@ helmfile apply
 And waiting for services to come online.
 
 If no changes were made, it is idempotent. New changes can be deployed by making them in the files and rerunning the above command.
+
+## additional rbac to enable VPN connection with headscale in resource-manager and monitoring
+```
+---
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: tailscale
+rules:
+- apiGroups: [""]
+  resources: ["secrets"]
+  resourceNames: ["tailscale"]
+  verbs: ["get", "update"]
+- apiGroups: [""]
+  resources: ["events"]
+  verbs: ["get", "create", "patch"]
+
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: tailscale
+subjects:
+- kind: ServiceAccount
+  name: tailscale
+  namespace: tailscale
+roleRef:
+  kind: Role
+  name: tailscale
+  apiGroup: rbac.authorization.k8s.io
+```
